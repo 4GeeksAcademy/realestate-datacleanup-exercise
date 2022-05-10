@@ -1,16 +1,20 @@
-
-   
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: >
-      pip install -r "requirements.txt" && 
-      gp open README.md
+      gp open project.ipynb;
+      pip install -r "requirements.txt";
     command: >
-      pip install -r "requirements.txt"
+      gp open project.ipynb;
+      pip install -r "requirements.txt";
+
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
   - port: 9000-9099
     onOpen: ignore
+
+# Install necessary packages
+image:
+  file: .gitpod.dockerfile
 
 vscode:
   extensions:
