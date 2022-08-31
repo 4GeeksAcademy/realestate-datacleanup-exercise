@@ -7,5 +7,6 @@
     "description": "Prepare a real dataset to later train a machine learning model",
     "duration": 3,
     "difficulty": "easy",
+    "projectType": "project",
     "video-solutions": false
 }
