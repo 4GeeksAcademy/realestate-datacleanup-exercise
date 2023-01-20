@@ -1,4 +1,6 @@
+<!--hide-->
 # Pretrabajo Proyecto Final Inmobiliario
+<!--endhide-->
 
 Finalmente, ya tienes todo el conocimiento necesario para preparar un DataSet real para luego entrenar un modelo Machine Learning, que aprenderás a lo largo del bootcamp. 
 
