@@ -12,6 +12,6 @@ This project comes with the necessary files to start working, so you just need t
 
 ## 📝 Instructions:
 
-Please open this project in Gitpod, then, open the file `./project.ipynb` that contains a series of exercises, compleate each of the exercises one by one.
+Please open this project in Gitpod, then, open the file `./project.ipynb` that contains a series of exercises, complete each of the exercises one by one.
 
 > Note: This exercise is not automatically graded.
