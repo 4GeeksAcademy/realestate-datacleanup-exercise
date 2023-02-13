@@ -1,14 +1,16 @@
+<!--hide-->
 # Real Estate Prework Final project
+<!--endhide-->
 
 Finally, you already have all the necessary knowledge to prepare a real dataset to later train a machine learning model, which you will learn throughout the bootcamp.
 
-It is intended that you apply all the knowledge learned with the other Numpy, Pandas, Matplotlib notebooks and even openCV that we will delve into later.
+It is intended that you apply all the knowledge learned with the other Numpy, Pandas, Matplotlib notebooks, and even openCV that we will delve into later.
 
 Feel free to add any additional analysis that you consider necessary and that is not raised in the questions.
 
 ## 🌱  How to start this project
 
-This project comes with the necessary files to start working, so you just need to clone its repository to start. We strongly recomend using Gitpod to clone it by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/realestate-datacleanup-exercise).
+This project comes with the necessary files to start working, so you just need to clone its repository to start. We strongly recommend using Gitpod to clone it by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/realestate-datacleanup-exercise).
 
 ## 📝 Instructions:
 
