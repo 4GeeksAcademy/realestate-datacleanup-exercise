@@ -10,7 +10,15 @@ Siéntete libre de añadir cualquier análisis adicional que consideres necesari
 
 ## 🌱  Como empezar este proyecto
 
-Este proyecto viene con los archivos necesarios para emepzar a trabajar, entonces solo tienes que clonar el repositorio para empezar. Nosotros recomendamos fuertemente usar Gitpod para clonarlo [dándole clic aquí](https://gitpod.io#https://github.com/4GeeksAcademy/realestate-datacleanup-exercise).
+Este proyecto viene con los archivos necesarios para comenzar a trabajar de inmediato.
+
+Recomendamos abrir este mismo repositorio usando una herramienta de aprovisionamiento como [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recomendado) o [Gitpod](https://4geeks.com/es/lesson/como-utilizar-gitpod). Alternativamente, puedes clonarlo en tu computadora local usando el comando `git clone`.
+
+Este es el repositorio que necesitas abrir:
+
+```txt
+https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
+```
 
 
 ## 📝 Instrucciones:
