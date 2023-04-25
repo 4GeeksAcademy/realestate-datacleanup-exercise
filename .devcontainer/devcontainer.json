@@ -6,9 +6,6 @@
 	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
 	"postCreateCommand": "pip install -r requirements.txt",
 	"customizations": {
-	  "codespaces": {
-		"openFiles": ["project.ipynb"]
-	  },
 	  "vscode": {
 		"extensions": [
 		  "ms-toolsai.jupyter",
