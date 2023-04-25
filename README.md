@@ -10,10 +10,18 @@ Feel free to add any additional analysis that you consider necessary and that is
 
 ## 🌱  How to start this project
 
-This project comes with the necessary files to start working, so you just need to clone its repository to start. We strongly recommend using Gitpod to clone it by [clicking here](https://gitpod.io#https://github.com/4GeeksAcademy/realestate-datacleanup-exercise).
+This project and its repository comes with the necessary files to start working.
+
+We recommend opening this very same repository using a provisioning tool like [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recommended) or [Gitpod](https://4geeks.com/lesson/how-to-use-gitpod). Alternatively, you can clone it on your local computer using the `git clone` command.
+
+This is the repository you need to open:
+
+```txt
+https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
+```
 
 ## 📝 Instructions:
 
-Please open this project in Gitpod, then, open the file `./project.ipynb` that contains a series of exercises, complete each of the exercises one by one.
+Open the file `./project.ipynb` that contains a series of exercises, complete each of the exercises one by one.
 
-> Note: This exercise is not automatically graded.
+> Note: This exercise is **not** automatically graded.
