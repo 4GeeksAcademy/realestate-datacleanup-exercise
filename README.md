@@ -20,6 +20,8 @@ This is the repository you need to open:
 https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
 ```
 
+**👉 Please follow these steps on** [how to start a project](https://4geeks.com/lesson/how-to-start-a-project).
+
 ## 📝 Instructions:
 
 Open the file `./project.ipynb` that contains a series of exercises, complete each of the exercises one by one.
