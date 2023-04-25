@@ -20,6 +20,8 @@ Este es el repositorio que necesitas abrir:
 https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
 ```
 
+**👉 Sigue las siguientes instrucciones sobre** [cómo empezar un proyecto nuevo](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-codificacion).
+
 
 ## 📝 Instrucciones:
 
