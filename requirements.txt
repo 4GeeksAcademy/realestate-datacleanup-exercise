@@ -1,11 +1,16 @@
 # pip install -r requirements.txt
 
 # Base ----------------------------------------
-pandas>=1.1.4
-numpy>=1.18.5
+pandas>=1.5.3
+numpy>=1.24.2
 opencv-python>=4.1.2
-matplotlib>=3.2.2
+matplotlib>=3.7.0
 ipyleaflet>=0.14.0
+torch==1.12.1
+torchvision==0.13.1
+ipywidgets==7.7.1
+tqdm==4.64.0
 
 # Machine learning ----------------------------
 sklearn
+
