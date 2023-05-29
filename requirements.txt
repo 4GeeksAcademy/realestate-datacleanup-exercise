@@ -8,5 +8,5 @@ matplotlib>=3.7.0
 ipyleaflet>=0.14.0
 
 # Machine learning ----------------------------
-sklearn
+scikit-learn
 
