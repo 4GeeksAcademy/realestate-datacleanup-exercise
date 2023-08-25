@@ -1,29 +1,23 @@
 <!--hide-->
-# Real Estate Prework Final project
+# Final prework project - Step by step guide
 <!--endhide-->
 
-Finally, you already have all the necessary knowledge to prepare a real dataset to later train a machine learning model, which you will learn throughout the bootcamp.
+- Understand a new dataset.
+- Use the knowledge acquired in the prework to solve the issues raised.
+- Analyze, if necessary, other questions.
 
-It is intended that you apply all the knowledge learned with the other Numpy, Pandas, Matplotlib notebooks, and even openCV that we will delve into later.
+## 🌱  How to start this project.
 
-Feel free to add any additional analysis that you consider necessary and that is not raised in the questions.
+Follow the instructions below:
 
-## 🌱  How to start this project
+1. Create a new repository by forking the [Git project](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise) or [by clicking here](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise/fork).
+2. Open the newly created repository in Codespace using the [Codespace button extension](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Once the Codespace VSCode has finished opening, start your project by following the instructions below.
 
-This project and its repository comes with the necessary files to start working.
+## 🚛 How to deliver this project
 
-We recommend opening this very same repository using a provisioning tool like [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recommended) or [Gitpod](https://4geeks.com/lesson/how-to-use-gitpod). Alternatively, you can clone it on your local computer using the `git clone` command.
+Once you have finished solving the exercises, be sure to commit your changes, push the fork of your repository and go to 4Geeks.com to upload the repository link.
 
-This is the repository you need to open:
+## 📝 Instructions
 
-```txt
-https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
-```
-
-**👉 Please follow these steps on** [how to start a project](https://4geeks.com/lesson/how-to-start-a-project).
-
-## 📝 Instructions:
-
-Open the file `./project.ipynb` that contains a series of exercises, complete each of the exercises one by one.
-
-> Note: This exercise is **not** automatically graded.
+Once you start working on the project, you will see a `./project.ipynb` file containing a list of exercises. Complete each of them, one by one.

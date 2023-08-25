@@ -1,30 +1,23 @@
 <!--hide-->
-# Pretrabajo Proyecto Final Inmobiliario
+# Proyecto final del prework - Guía paso a paso
 <!--endhide-->
 
-Finalmente, ya tienes todo el conocimiento necesario para preparar un DataSet real para luego entrenar un modelo Machine Learning, que aprenderás a lo largo del bootcamp. 
+- Comprender un dataset nuevo.
+- Utilizar los conocimientos adquiridos en el prework para resolver las cuestiones planteadas.
+- Analizar, si fuera necesario, otras cuestiones.
 
-Se pretende que apliques todos los conocimientos aprendidos con los demás, Numpy, Pandas, cuadernos Matplotlib e incluso openCV que profundizaremos más adelante.
+## 🌱  Cómo iniciar este proyecto
 
-Siéntete libre de añadir cualquier análisis adicional que consideres necesario y que no esté planteado en las preguntas.
+Sigue las siguientes instrucciones:
 
-## 🌱  Como empezar este proyecto
+1. Crear un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise) o [haciendo clic aquí](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise/fork).
+2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
+3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
 
-Este proyecto viene con los archivos necesarios para comenzar a trabajar de inmediato.
+## 🚛 Cómo entregar este proyecto
 
-Recomendamos abrir este mismo repositorio usando una herramienta de aprovisionamiento como [Codespaces](https://4geeks.com/lesson/what-is-github-codespaces) (recomendado) o [Gitpod](https://4geeks.com/es/lesson/como-utilizar-gitpod). Alternativamente, puedes clonarlo en tu computadora local usando el comando `git clone`.
+Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, haz push al fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
-Este es el repositorio que necesitas abrir:
+## 📝 Instructions
 
-```txt
-https://github.com/4GeeksAcademy/realestate-datacleanup-exercise
-```
-
-**👉 Sigue las siguientes instrucciones sobre** [cómo empezar un proyecto nuevo](https://4geeks.com/es/lesson/como-comenzar-un-proyecto-de-codificacion).
-
-
-## 📝 Instrucciones:
-
-Por favor abre este proyecto en Gitpod, luego abre el archivo `./project.ipynb` que contiene una serie de ejercicios. Completa cada uno de ellos, uno por uno.
-
-> Nota: Este ejercicio no se corrige automáticamente. 
+Una vez comiences a trabajar en el proyecto, verás un fichero `./project.ipynb` que contiene una serie de ejercicios. Completa cada uno de ellos, uno por uno.
