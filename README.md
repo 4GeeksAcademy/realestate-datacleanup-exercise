@@ -16,7 +16,7 @@ Follow the instructions below:
 
 ## 🚛 How to deliver this project
 
-Once you have finished solving the exercises, be sure to commit your changes, push the fork of your repository and go to 4Geeks.com to upload the repository link.
+Once you have finished solving the exercises, be sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
 
 ## 📝 Instructions
 

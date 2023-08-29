@@ -16,7 +16,7 @@ Sigue las siguientes instrucciones:
 
 ## 🚛 Cómo entregar este proyecto
 
-Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, haz push al fork de tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
+Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, haz push a tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
 ## 📝 Instructions
 
