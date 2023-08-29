@@ -18,6 +18,6 @@ Sigue las siguientes instrucciones:
 
 Una vez que hayas terminado de resolver los ejercicios, asegúrate de confirmar tus cambios, haz push a tu repositorio y ve a 4Geeks.com para subir el enlace del repositorio.
 
-## 📝 Instructions
+## 📝 Instrucciones
 
 Una vez comiences a trabajar en el proyecto, verás un fichero `./project.ipynb` que contiene una serie de ejercicios. Completa cada uno de ellos, uno por uno.
