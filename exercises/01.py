@@ -12,3 +12,5 @@ address = ds['address'].loc[index]
 
 # TO DO, the price is 0 so it might be duplicated
 print("The house with address" ,address, "is the cheapest and its price is",price)
+
+
