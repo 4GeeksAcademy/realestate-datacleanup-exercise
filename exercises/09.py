@@ -9,3 +9,12 @@ import pandas as pd
 # this CSV file contains semicolons instead of comas as separator
 ds = pd.read_csv('assets/real_estate.csv', sep=';')
 
+#precio medio 
+#print(ds['level5'=='Galapagar'])  
+ds["pps"] = ds["price"]/ds["surface"] 
+
+# it works ds.loc[(ds['level5'] == "Galapagar")]
+
+print(ds[ds['level5']== "Galapagar"]["pps"].mean())
+
+print(ds[ds['level5']== "Valdemorillo"]["pps"].mean())
