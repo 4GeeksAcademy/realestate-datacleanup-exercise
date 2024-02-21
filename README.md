@@ -6,7 +6,7 @@
 - Use the knowledge acquired in the prework to solve the issues raised.
 - Analyze, if necessary, other questions.
 
-## 🌱  How to start this project.
+## 🌱 How to start this project.
 
 Follow the instructions below:
 
@@ -16,7 +16,7 @@ Follow the instructions below:
 
 ## 🚛 How to deliver this project
 
-Once you have finished solving the exercises, be sure to commit your changes, push to your repository and go to 4Geeks.com to upload the repository link.
+Once you have finished solving the exercises, be sure to commit your changes, push them to your repository, and go to 4Geeks.com to upload the repository link.
 
 ## 📝 Instructions
 
