@@ -20,4 +20,4 @@ Once you have finished solving the exercises, be sure to commit your changes, pu
 
 ## 📝 Instructions
 
-Once you start working on the project, you will see a `./project.ipynb` file containing a list of exercises. Complete each of them, one by one.
+Once you start working on the project, you will see a `./project.ipynb` file containing a list of exercises. Enter there and complete each of them, one by one.
