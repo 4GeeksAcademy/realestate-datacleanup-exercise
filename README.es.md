@@ -1,12 +1,12 @@
 <!--hide-->
-# Proyecto final del prework - Guía paso a paso
+# Proyecto final del Prework - Guía paso a paso:
 <!--endhide-->
 
 - Comprender un dataset nuevo.
-- Utilizar los conocimientos adquiridos en el prework para resolver las cuestiones planteadas.
+- Utilizar los conocimientos adquiridos en el Prework para resolver las cuestiones planteadas.
 - Analizar, si fuera necesario, otras cuestiones.
 
-## 🌱  Cómo iniciar este proyecto
+## 🌱  Cómo iniciar este proyecto.
 
 Sigue las siguientes instrucciones:
 
