@@ -1,0 +1,267 @@
+[33mcommit 2a761a4f016785dfae50004f719f1db29efab22f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: pdeleonsoria <168183136+pdeleonsoria@users.noreply.github.com>
+Date:   Sun Jul 7 11:13:31 2024 +0000
+
+    Ejercicios finales
+
+[33mcommit efbfbd3d8e4925e72eed0a1ef4a7b58fdf12f81d[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Jun 18 15:35:11 2024 -0400
+
+    Update project.es.ipynb
+
+[33mcommit 7104365de1b824c8c0ae11e0a1ffa30a74e6742a[m
+Merge: 18ae6a2 eb9b736
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri May 31 11:40:28 2024 -0400
+
+    Merge pull request #21 from josemoracard/jose2-project.ipynb
+    
+    Fixed text project.ipynb
+
+[33mcommit eb9b7366e88964a8c430c5ea5e9d69c418546d12[m
+Merge: b8ccf9d 18ae6a2
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri May 31 11:40:17 2024 -0400
+
+    Merge branch 'main' into jose2-project.ipynb
+
+[33mcommit 18ae6a270579ba26cd70aa61c4666e0da444536a[m
+Merge: 0aa0f7f 30b7274
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri May 31 11:38:34 2024 -0400
+
+    Merge pull request #7 from 4GeeksAcademy/main
+    
+    Fixed grammar error in exercise 12
+
+[33mcommit 0aa0f7ff814257bc4e04e25e322a9029ca52d38b[m
+Merge: 2e86ac1 fbf7626
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri May 31 11:38:17 2024 -0400
+
+    Merge pull request #28 from damianlicheri/patch-1
+    
+    Update README.es.md
+
+[33mcommit 2e86ac1cd602cfdf01c53cec0b34bcb7dea0e3ba[m
+Merge: 614c573 f83c163
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri May 31 11:37:42 2024 -0400
+
+    Merge pull request #29 from tommygonzaleza/patch-1
+    
+    Translations that were missing on project.es.ipynb
+
+[33mcommit f83c1638f3115522ef11231376c3333b27fe066a[m
+Author: Tomas Gonzalez <56565994+tommygonzaleza@users.noreply.github.com>
+Date:   Fri May 31 09:54:11 2024 -0400
+
+    Translations that were missing on project.es.ipynb
+
+[33mcommit fbf7626ef8ea9bc3d5249120bac8daa11b1cc4a4[m
+Author: damianlicheri <164061693+damianlicheri@users.noreply.github.com>
+Date:   Thu May 16 15:29:00 2024 -0400
+
+    Update README.es.md
+    
+    En la última instrucción del final, agregar "que": Una vez "que" comiences a trabajar en el proyecto....
+
+[33mcommit 614c5736d02f429e332679dbd72bb980f9309aba[m
+Merge: e0e94e0 5731b9b
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Mar 11 15:26:13 2024 -0500
+
+    Merge pull request #19 from josemoracard/jose1-README
+    
+    Update README.md
+
+[33mcommit b8ccf9ddd37ff96ab36ffc3aeabb73d998f33aa7[m
+Author: Jose Mora <109150320+josemoracard@users.noreply.github.com>
+Date:   Wed Feb 28 17:08:58 2024 +0100
+
+    Update project.es.ipynb
+
+[33mcommit 86df26573777e1cce39ce9e3189a0a21c36ea669[m
+Author: Jose Mora <109150320+josemoracard@users.noreply.github.com>
+Date:   Mon Feb 26 18:54:10 2024 +0000
+
+    Update project.ipynb
+
+[33mcommit 5731b9bdc4dd079cb3e60a9362ceedeb8c3ef435[m
+Author: Jose Mora <109150320+josemoracard@users.noreply.github.com>
+Date:   Wed Feb 21 19:22:59 2024 +0100
+
+    Update README.es.md
+
+[33mcommit b8d88bbbc06ecc630eb8ab815803e6f5f72d48b1[m
+Author: Jose Mora <109150320+josemoracard@users.noreply.github.com>
+Date:   Wed Feb 21 19:17:50 2024 +0100
+
+    Update README.md
+
+[33mcommit e0e94e0c5ace77deabb6f51b61b8b60e4d98bb8c[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jan 22 18:03:22 2024 -0500
+
+    Update project.es.ipynb
+
+[33mcommit 1b579f6d5a87e885d0f3c9426b7f18c39eeb1e64[m
+Merge: 3ae76d6 ae35ae7
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon Jan 22 18:02:51 2024 -0500
+
+    Merge pull request #16 from arnaldoperez/main
+    
+    Traduccion a español del problem
+
+[33mcommit ae35ae70b58bed07ea990310ee6d1f89ab8dea73[m
+Author: Arnaldo Perez <arnaldoeperezb@gmail.com>
+Date:   Mon Jan 22 14:25:47 2024 -0400
+
+    Traduccion a español del problem
+
+[33mcommit 30b72743c58e5d3035d0c23e4b938646d3efa544[m
+Author: Israel Dellinger <51415637+idellinger@users.noreply.github.com>
+Date:   Mon Sep 25 23:30:40 2023 +0000
+
+    Fixed grammar error in exercise 12
+
+[33mcommit 3ae76d6d1808636411d7d56a6c9d20d8d52b4bc5[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Sep 8 09:43:13 2023 -0400
+
+    Create .gitpod.dockerfile
+
+[33mcommit 5f8b27b853b525777140b03b2a84f6384684892f[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Sep 8 09:42:42 2023 -0400
+
+    Create .gitpod.yml
+
+[33mcommit 55395b8518f5178f89a5382c6485af8806acc2aa[m
+Merge: 1fb8859 23fb061
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Fri Sep 8 09:41:04 2023 -0400
+
+    Merge pull request #5 from cvazquezlos/main
+    
+    Fixed requirements error and update exercises sheet for more comprehension
+
+[33mcommit 23fb06102cb5da4d68c427f1a6c3b2daa415715a[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Tue Aug 29 15:36:03 2023 +0200
+
+    README review
+
+[33mcommit 2408461c9ada0f8032b0ab374a450b9c34efc414[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Tue Aug 29 15:35:23 2023 +0200
+
+    Review README of project
+
+[33mcommit 14042f5c4c5254343ae63c531fa183bf097ecfcb[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Fri Aug 25 19:26:18 2023 +0000
+
+    Finished review for prework project content
+
+[33mcommit 36c97b322dacd59f709e0cd695ebc2e17b8bbf73[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Wed Jun 7 16:56:37 2023 +0200
+
+    Updated exercise formulation and order
+
+[33mcommit 3e3b50508285151aff3079d1fc24f1d3bf591d96[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Wed Jun 7 16:16:27 2023 +0200
+
+    Updated both Python version and metadata information
+
+[33mcommit f8ae4b43c919a45b9a1d9fe68703b2487d58b057[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Wed Jun 7 16:08:33 2023 +0200
+
+    Fixed styling errors
+
+[33mcommit 9e0d3c7e6d15e37f2cd26bc1f5e946869956e392[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Wed Jun 7 16:04:43 2023 +0200
+
+    Updated exercise content
+
+[33mcommit 6266b7793650a883744d65a26bd1639a352568ef[m
+Author: Carlos Vázquez Losada <c.vazquezlosada@gmail.com>
+Date:   Wed Jun 7 16:03:15 2023 +0200
+
+    Update requirements.txt
+    
+    Added jupyter_contrib_nbextensions dependency
+
+[33mcommit 1fb88591d6cd5003803b433779be04b1906ab80d[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Mon May 29 12:19:19 2023 -0400
+
+    Update requirements.txt
+
+[33mcommit f730c13b2ae8152c7129b5ddb50778a0920c14ee[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue May 9 15:44:59 2023 +0000
+
+    added loading code as an example
+
+[33mcommit cf09ca5dce65a80717c3bfbaee7bdd136b70d29e[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue May 9 15:44:20 2023 +0000
+
+    added loading code as an example
+
+[33mcommit e6a433417d17a10f96b61a28bc0a84e38b5c49b3[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 16:57:32 2023 -0400
+
+    Update README.es.md
+
+[33mcommit b2bdb905fa400e399aeadee178a5868e967115b8[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 16:56:23 2023 -0400
+
+    Update README.md
+
+[33mcommit e01ce7867bbb44e021aa36d10774f9225255f10f[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 15:41:03 2023 -0400
+
+    Update README.es.md
+
+[33mcommit 4511e53a47677ead499477485810196e8933151f[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 15:39:47 2023 -0400
+
+    Update README.md
+
+[33mcommit 0ceebc9b17f8efe2bcc82fa160308b94fe4a946e[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 19:25:41 2023 +0000
+
+    fixed requirements txt
+
+[33mcommit 0fb7d82620e79b7df294342488a83882b657e3b3[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 19:20:39 2023 +0000
+
+    small fixes
+
+[33mcommit 7bc2bfdb94e69cfc514c8a76e0531b97e8a46125[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 19:04:12 2023 +0000
+
+    better use of the devcontainer configuration
+
+[33mcommit 6dead2a15c60a4f91724d184914a874fba0dd7d4[m
+Author: Alejandro Sanchez <aalejo@gmail.com>
+Date:   Tue Apr 25 14:33:15 2023 -0400
+
+    Update requirements.txt
+
+[33mcommit c
