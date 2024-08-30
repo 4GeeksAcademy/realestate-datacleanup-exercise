@@ -78,18 +78,20 @@ def IsValdemorilloAndGalapagarMeanEqual(df):
 
 ###Comprobar si el precio/m2 promedio de Valdemorillo y Galapagar son el mismo###
 
-def PricePerSquare(df):
+def IsValdemorilloAndGalapagarMeanPPSEqual(df):
     pps = df.price / df.surface
     df['pps'] = pps
-    return df.pps
-
-def PpsValdemorillo(df):
-    ppsValdemorillo = df[df['level5'] == "Valdemorillo"].set_index('level5')
-    return ppsValdemorillo.pps.mean()
-
-def PpsGalapagar(df):
-    ppsgalapagar = df[df['level5'] == "Galapagar"].set_index('level5')
-    return ppsgalapagar.pps.mean()
+    ppsValdemorillo = df[df['level5'] == "Valdemorillo"]
+    ppsGalapagar = df[df['level5'] == "Galapagar"]
+    print (f"El precio medio de Valdemorillo por metro cuadrado es de {ppsValdemorillo.pps.mean()}.\nEl precio medio de Galapagar por metro cuadrado es de {ppsGalapagar.pps.mean()}.")
+    if ppsValdemorillo.pps.mean() == ppsGalapagar.pps.mean():
+        print ("El precio medio por metro cuadrado de Valdemorillo y Galapagar es el mismo.")
+    elif ppsValdemorillo.pps.mean() > ppsGalapagar.pps.mean():
+        print ("El precio medio por metro cuadrado de Valdemorillo es superior al de Galapagar.")
+    else:
+        print ("El precio medio por metro cuadrado de Galapagar es superior al de Valdemorillo.")
+    return None
+  
 
 #########Ejercicios########
 
@@ -122,4 +124,7 @@ def PpsGalapagar(df):
 #print(HistogramPriceArroyomolinos(df_estates))
 
 #Ejercicio9
-print (IsValdemorilloAndGalapagarMeanEqual(df_estates))
+#print (IsValdemorilloAndGalapagarMeanEqual(df_estates))
+
+#Ejercicio10
+#print (IsValdemorilloAndGalapagarMeanPPSEqual(df_estates))
