@@ -92,6 +92,16 @@ def IsValdemorilloAndGalapagarMeanPPSEqual(df):
         print ("El precio medio por metro cuadrado de Galapagar es superior al de Valdemorillo.")
     return None
   
+  ###Analizamos la relación entre el precio y la superficie de las casas.###
+
+def RelPriceSurface(df):
+    plt.figure(figsize=(10,5))
+    plt.scatter(df.price, df.surface, label = "Precio")
+
+    plt.title("Relación Superficie/Precio")
+    plt.legend()
+    plt.show()
+    return None
 
 #########Ejercicios########
 
@@ -128,3 +138,6 @@ def IsValdemorilloAndGalapagarMeanPPSEqual(df):
 
 #Ejercicio10
 #print (IsValdemorilloAndGalapagarMeanPPSEqual(df_estates))
+
+#Ejercicio11
+print (RelPriceSurface(df_estates))
