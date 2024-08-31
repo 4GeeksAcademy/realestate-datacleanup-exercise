@@ -92,9 +92,9 @@ def IsValdemorilloAndGalapagarMeanPPSEqual(df):
         print ("El precio medio por metro cuadrado de Galapagar es superior al de Valdemorillo.")
     return None
   
-  ###Analizamos la relación entre el precio y la superficie de las casas.###
+###Analizamos la relación entre el precio y la superficie de las casas.###
 
-def RelPriceSurface(df):
+def RelPriceSurface(df): #SIN ACABAR
     plt.figure(figsize=(10,5))
     plt.scatter(df.price, df.surface, label = "Precio")
 
@@ -102,6 +102,21 @@ def RelPriceSurface(df):
     plt.legend()
     plt.show()
     return None
+
+###Buscamos cuantas agencias contiene el DataSet###
+def HowManyRealEstatesAre(df):
+    return len(df.id_realEstates.value_counts()) #Juntamos todas las ID de las Inmobiliarias y devolvemos la longitud.
+
+###Buscamos la población con más cantidad de casas###
+
+def HowCityHaveMoreHouses(df):
+    return df.level5.value_counts().head(1)
+
+###Creamos un nuevo DataFrame que contenga Fuenlabrada, Leganes, Getafe y Alcorcón"###
+
+def CinturonSur(df):
+    cinturonsur = df.isin({'level5': ["Fuenlabrada","Leganés","Getafe","Alcorcón"]})
+    return cinturonsur
 
 #########Ejercicios########
 
@@ -140,4 +155,13 @@ def RelPriceSurface(df):
 #print (IsValdemorilloAndGalapagarMeanPPSEqual(df_estates))
 
 #Ejercicio11
-print (RelPriceSurface(df_estates))
+#print (RelPriceSurface(df_estates))
+
+#Ejercicio12
+#print (HowManyRealEstatesAre(df_estates))
+
+#Ejercicio13
+#print(HowCityHaveMoreHouses(df_estates))
+
+#Ejercicio14
+print(CinturonSur(df_estates))
