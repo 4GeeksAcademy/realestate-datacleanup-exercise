@@ -115,8 +115,15 @@ def HowCityHaveMoreHouses(df):
 ###Creamos un nuevo DataFrame que contenga Fuenlabrada, Leganes, Getafe y Alcorcón"###
 
 def CinturonSur(df):
-    cinturonsur = df.isin({'level5': ["Fuenlabrada","Leganés","Getafe","Alcorcón"]})
+    filt_cinturonSur =df['level5'].isin(["Fuenlabrada","Leganés","Getafe","Alcorcón"])
+    cinturonsur = df[filt_cinturonSur]
     return cinturonsur
+
+###Grafico de barra de la mediana de los precios de Cinturon Sur###
+
+def CinturonSurMeanPrice(df):
+    return None
+
 
 #########Ejercicios########
 
@@ -164,4 +171,7 @@ def CinturonSur(df):
 #print(HowCityHaveMoreHouses(df_estates))
 
 #Ejercicio14
-print(CinturonSur(df_estates))
+CinturonSur(df_estates)
+
+#Ejercicio15
+print(CinturonSurMeanPrice(CinturonSur(df_estates)))
