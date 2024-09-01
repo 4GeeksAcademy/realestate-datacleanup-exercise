@@ -138,6 +138,10 @@ def CinturonSurMeanPrice(df):
 
 ###Calcula la medía y la varianza de muestra del Cinturón Sur###
 
+def MeanAndVar(df):
+    #Para calcular la varianza típica hemos de asegurarnos que ddof es 0.
+    
+    return f"La media de precios del cinturón sur es de {df.price.mean()} y la varianza de precios es de {df.price.var(ddof = 0)}\nLa media de habitaciones en el cinturón sur es de {df.rooms.mean()} y la varianza es de {df.rooms.var(ddof = 0)}\nLa media de baños en el cinturón sur es de {df.bathrooms.mean()} y la varianza es de {df.bathrooms.var(ddof = 0)}\nLa media de superficie del cinturón sur es de {df.surface.mean()} y la varianza es de {df.surface.var(ddof = 0)}"
 
 #########Ejercicios########
 
@@ -191,4 +195,4 @@ CinturonSur(df_estates)
 #print(CinturonSurMeanPrice(CinturonSur(df_estates)))
 
 #Ejercicio16
-
+print (MeanAndVar(CinturonSur(df_estates)))
