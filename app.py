@@ -122,7 +122,21 @@ def CinturonSur(df):
 ###Grafico de barra de la mediana de los precios de Cinturon Sur###
 
 def CinturonSurMeanPrice(df):
+    labels = ["Fuenlabrada","Alcorcón","Leganés","Getafe"]
+    fuenlabrada = df[df['level5'] == "Fuenlabrada"].price.mean()
+    alcorcon = df[df['level5'] == "Alcorcón"].price.mean()
+    leganes = df[df['level5'] == "Leganés"].price.mean()
+    getafe = df[df['level5'] == "Getafe"].price.mean()
+    values = (fuenlabrada, alcorcon, leganes, getafe)
+    plt.figure(figsize=(10,5))
+    plt.bar(labels, values)
+
+    plt.title("Precios Medios Cinturón Sur")
+    plt.show()
+
     return None
+
+###Calcula la medía y la varianza de muestra del Cinturón Sur###
 
 
 #########Ejercicios########
@@ -174,4 +188,7 @@ def CinturonSurMeanPrice(df):
 CinturonSur(df_estates)
 
 #Ejercicio15
-print(CinturonSurMeanPrice(CinturonSur(df_estates)))
+#print(CinturonSurMeanPrice(CinturonSur(df_estates)))
+
+#Ejercicio16
+
