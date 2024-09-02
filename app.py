@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
 
 ###Creamos el data frame con a partir del CSV, la separación es ; ###
 
@@ -143,6 +144,23 @@ def MeanAndVar(df):
     
     return f"La media de precios del cinturón sur es de {df.price.mean()} y la varianza de precios es de {df.price.var(ddof = 0)}\nLa media de habitaciones en el cinturón sur es de {df.rooms.mean()} y la varianza es de {df.rooms.var(ddof = 0)}\nLa media de baños en el cinturón sur es de {df.bathrooms.mean()} y la varianza es de {df.bathrooms.var(ddof = 0)}\nLa media de superficie del cinturón sur es de {df.surface.mean()} y la varianza es de {df.surface.var(ddof = 0)}"
 
+def HowIsMostExpensiveHouse(df):
+    fuenlabrada = df[df['level5'] == "Fuenlabrada"].sort_values(by = 'price').tail(1).squeeze()
+    alcorcon = df[df['level5'] == "Alcorcón"].sort_values(by = 'price').tail(1).squeeze()
+    leganes = df[df['level5'] == "Leganés"].sort_values(by = 'price').tail(1).squeeze()
+    getafe = df[df['level5'] == "Getafe"].sort_values(by = 'price').tail(1).squeeze()
+    return f"La casa más cara de {fuenlabrada.level5} en {fuenlabrada.address} tiene un precio de {fuenlabrada.price} €.\nLa casa más cara de {alcorcon.level5} en {alcorcon.address} tiene un precio de {alcorcon.price} €.\nLa casa más cara de {leganes.level5} en {leganes.address} tiene un precio de {leganes.price} €.\nLa casa más cara de {getafe.level5} en {getafe.address} tiene un precio de {getafe.price} €."
+
+###Historiograma de precios del Cinturon Sur###
+
+def HistogramPriceCinturonSur(df):
+    #Formula de normalización: x' = x-xmin/xmax-xmin
+    fuenlabrada = df[df['level5'] == "Fuenlabrada"]
+    alcorcon = df[df['level5'] == "Alcorcón"]
+    normalized_fuenlabrada = (fuenlabrada['price'] - fuenlabrada['price'].min() / fuenlabrada['price'].max() - fuenlabrada['price'].min())
+    #normalized_alcorcon = (alcorcon['price'] - alcorcon['price'].min() / alcorcon['price'].max - alcorcon['price'].min())
+    return normalized_fuenlabrada, alcorcon.price.isna()
+
 #########Ejercicios########
 
 #Ejercicio1
@@ -195,4 +213,10 @@ CinturonSur(df_estates)
 #print(CinturonSurMeanPrice(CinturonSur(df_estates)))
 
 #Ejercicio16
-print (MeanAndVar(CinturonSur(df_estates)))
+#print (MeanAndVar(CinturonSur(df_estates)))
+
+#Ejercicio17
+#print (HowIsMostExpensiveHouse(CinturonSur(df_estates)))
+
+#Ejercicio18
+print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
