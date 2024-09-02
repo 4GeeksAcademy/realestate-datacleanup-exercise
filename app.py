@@ -155,11 +155,7 @@ def HowIsMostExpensiveHouse(df):
 
 def HistogramPriceCinturonSur(df):
     #Formula de normalización: x' = x-xmin/xmax-xmin
-    fuenlabrada = df[df['level5'] == "Fuenlabrada"]
-    alcorcon = df[df['level5'] == "Alcorcón"]
-    normalized_fuenlabrada = (fuenlabrada['price'] - fuenlabrada['price'].min() / fuenlabrada['price'].max() - fuenlabrada['price'].min())
-    #normalized_alcorcon = (alcorcon['price'] - alcorcon['price'].min() / alcorcon['price'].max - alcorcon['price'].min())
-    return normalized_fuenlabrada, alcorcon.price.isna()
+    return normalized_fuenlabrada
 
 #########Ejercicios########
 
