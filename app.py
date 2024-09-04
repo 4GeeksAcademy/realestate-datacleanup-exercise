@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+#Normalizar datos con la funcion MinMaxScaler
 from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
 
 ###Creamos el data frame con a partir del CSV, la separación es ; ###
 
@@ -155,7 +157,30 @@ def HowIsMostExpensiveHouse(df):
 
 def HistogramPriceCinturonSur(df):
     #Formula de normalización: x' = x-xmin/xmax-xmin
-    return normalized_fuenlabrada
+    fuenlabrada = df[df['level5'] == "Fuenlabrada"]
+    fuenlabrada_scaled = scaler.fit_transform(fuenlabrada[['price']])
+    alcorcon = df[df['level5'] == "Alcorcón"]
+    alcorcon_scaled =scaler.fit_transform(alcorcon[['price']])
+    leganes = df[df['level5'] == "Leganés"]
+    leganes_scaled = scaler.fit_transform(leganes[['price']])
+    getafe = df[df['level5'] == "Getafe"]
+    getafe_scaled = scaler.fit_transform(getafe[['price']])
+
+    #Creamos el Histograma
+
+    plt.figure(figsize=(10,5))
+    plt.hist([fuenlabrada_scaled, alcorcon_scaled, leganes_scaled, getafe_scaled], bins=30, alpha=0.8, label="Fuenlabrada")
+    plt.hist(alcorcon_scaled,bins=30, alpha=0.8, label="Alcorcón")
+    plt.hist(leganes_scaled, bins=30, alpha=0.8, label="Leganés")
+    plt.hist(getafe_scaled, bins=30, alpha=0.8, label="Getafe")
+
+    plt.legend()
+    plt.show()
+
+    return None
+
+###Precio medio/m2 Getafe y Alcorcón###
+
 
 #########Ejercicios########
 
@@ -215,4 +240,4 @@ CinturonSur(df_estates)
 #print (HowIsMostExpensiveHouse(CinturonSur(df_estates)))
 
 #Ejercicio18
-print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
+#print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
