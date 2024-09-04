@@ -183,7 +183,7 @@ def HistogramPriceCinturonSur(df):
 
 def PricePerSquareGetafeAndAlcorcon(df):
     #Creamos la columna pps
-    pps = float(df.price / df.surface)
+    pps = df.price / df.surface
     df['pps'] = pps
 
     getafe = df[df['level5'] == "Getafe"]
