@@ -181,6 +181,18 @@ def HistogramPriceCinturonSur(df):
 
 ###Precio medio/m2 Getafe y Alcorcón###
 
+def PricePerSquareGetafeAndAlcorcon(df):
+    #Creamos la columna pps
+    pps = float(df.price / df.surface)
+    df['pps'] = pps
+
+    getafe = df[df['level5'] == "Getafe"]
+    getafe_scaled = scaler.fit_transform([['pps']])
+    alcorcon = df[df['level5'] == "Alcorcón"]
+    alcorcon_scaled = scaler.fit_transform([['pps']])
+    
+
+    return None
 
 #########Ejercicios########
 
@@ -241,3 +253,6 @@ CinturonSur(df_estates)
 
 #Ejercicio18
 #print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
+
+#Ejercicio19
+print (PricePerSquareGetafeAndAlcorcon(CinturonSur(df_estates)))
