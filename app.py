@@ -240,7 +240,7 @@ def PricePerSquareGetafeAndAlcorcon(df):
 #print(HowCityHaveMoreHouses(df_estates))
 
 #Ejercicio14
-CinturonSur(df_estates)
+#CinturonSur(df_estates)
 
 #Ejercicio15
 #print(CinturonSurMeanPrice(CinturonSur(df_estates)))
@@ -255,4 +255,12 @@ CinturonSur(df_estates)
 #print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
 
 #Ejercicio19
-print (PricePerSquareGetafeAndAlcorcon(CinturonSur(df_estates)))
+#print (PricePerSquareGetafeAndAlcorcon(CinturonSur(df_estates)))
+
+from ipyleaflet import Map, basemaps
+
+# Mapa centrado en (60 grados latitud y -2.2 grados longitud)
+# Latitud, longitud
+map = Map(basemap=basemaps.Strava.Winter, zoom=2.0)
+
+display (map)
