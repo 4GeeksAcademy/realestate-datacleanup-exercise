@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 #Normalizar datos con la funcion MinMaxScaler
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
+from ipyleaflet import Map, basemaps #Mapas
 
 ###Creamos el data frame con a partir del CSV, la separación es ; ###
 
@@ -257,10 +258,10 @@ def PricePerSquareGetafeAndAlcorcon(df):
 #Ejercicio19
 #print (PricePerSquareGetafeAndAlcorcon(CinturonSur(df_estates)))
 
-from ipyleaflet import Map, basemaps
-
+#Ejercicio21
 # Mapa centrado en (60 grados latitud y -2.2 grados longitud)
 # Latitud, longitud
-map = Map(basemap=basemaps.Strava.Winter, zoom=2.0)
+map = Map(center = (60, -2.2), zoom = 2, min_zoom = 1, max_zoom = 20, 
+    basemap=basemaps.Esri.WorldStreetMap)
 
 display (map)
