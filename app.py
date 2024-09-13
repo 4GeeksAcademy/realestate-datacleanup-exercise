@@ -2,47 +2,66 @@ import pandas as pd
 import matplotlib.pyplot as plt
 #Normalizar datos con la funcion MinMaxScaler
 from sklearn.preprocessing import MinMaxScaler
-scaler = MinMaxScaler()
 from ipyleaflet import Map, basemaps #Mapas
 
-###Creamos el data frame con a partir del CSV, la separación es ; ###
-
+# Este archivo CSV contiene puntos y comas en lugar de comas como separadores
 df_estates = pd.read_csv('assets/real_estate.csv', sep=';')
-###Imprimir dirección de la casa más cara y la más barata###
+df_estates
 
-def HighPrice(df):
+###Ejercicio 1: Imprimir dirección de la casa más cara###
+
+def HighPrice(highprice):
     #Cogemos el valor más grande de la columna Price (El ultimo en este caso) y lo convertimos en una Serie con squeeze para trabajarlo mejor.
-    df_estates_highprice = df.sort_values('price').tail(1).squeeze()
-    return f"La casa con dirección en Calle {df_estates_highprice['level7']} es la más cara y su precio es de {df_estates_highprice['price']} €."
+    highprice_house = highprice.sort_values('price').tail(1).squeeze()
+    print (f"La casa con dirección {highprice_house['address']},{highprice_house['level5']} es la más cara y su precio es de {highprice_house['price']} €.")
 
-def LowPrice(df):
-    df_estates_lowprice = df.sort_values('price').head(1).squeeze()
-    return f"La casa con dirección en Calle {df_estates_lowprice['level7']} es la más barata y su precio es de {df_estates_lowprice['price']} €."
-###Imprimimos la casa más grande y la más pequeña###
+print (HighPrice(df_estates))
 
-def MoreSurface(df):
-    df_estates_moresurface = df.sort_values('surface').tail(1).squeeze()
-    return f"La casa más grande está en la Calle {df_estates_moresurface['level7']} y su superficie es de {df_estates_moresurface['surface']} metros."
+###Ejercicio 2: Imprimir dirección de la casa más barata###
 
-def LessSurface(df):
-    df_estates_lesssufrface = df.sort_values('surface').head(1).squeeze()
-    return f"La casa más pequeña está en la Calle {df_estates_lesssufrface['level7']} y su superficie es de {df_estates_lesssufrface['surface']} metros."
+def LowPrice(lowprice):
+    lowprice_house = lowprice.sort_values('price').head(1).squeeze()
+    print (f"La casa con dirección en {lowprice_house['address']}, {lowprice_house['level5']} es la más barata y su precio es de {lowprice_house['price']} €.")
 
-###Nombre de las poblaciones###
+print (LowPrice(df_estates))
 
-def Populations(df):
-    populations = df.level5.squeeze()
-    list_population = []
-    for i in range(len(populations)):
-       list_population.append(populations[i])
-    return list_population
+
+###Ejercicio 3: Imprimimos la casa más grande y la más pequeña###
+
+def MoreSurface(moresurface):
+    moresurface_house = moresurface.sort_values('surface').tail(1).squeeze()
+    print (f"La casa más grande está en {moresurface_house['address']}, {moresurface_house['level5']} y su superficie es de {moresurface_house['surface']} metros.")
+
+def LessSurface(lesssurface):
+    lessfurface_house = lesssurface.sort_values('surface').head(1).squeeze()
+    print (f"La casa más pequeña está en {lessfurface_house['address']}, {lessfurface_house['level5']} y su superficie es de {lessfurface_house['surface']} metros.")
+
+print (MoreSurface(df_estates))
+print (LessSurface(df_estates))
+
+###Ejercicio 4: Nombre de las poblaciones###
+
+def Populations(populations):
+    counter = len(populations.level5)
+    list_populations = list()
+    for i in range(counter):
+        list_populations.append(populations.level5[i])
+    
+    #Agrupamos los valores únicos.
+    list_populations = np.unique(list_populations)
+    
+    return list_populations
+
+for pop in (Populations(df_estates)):
+    print (pop, end=", ")
 
 ### Comprobar si hay valores no admitidos en la lista ###
 
-def NanIdentificy(df):
-    cols_nan = df.columns[df.isnull().any()] #Localizamos las columnas con valores NaN
-    rows_nan = df[df.isnull().any(axis = 1)][cols_nan] #Localizamos las filas con valores NaN
-    return rows_nan.isnull().any() #Solo devolvemos las columnas con valor NaN = True
+def NanIdentificy(value):
+    print (value.isnull().any())
+    print (value.isnull().any(axis=1))
+
+print (NanIdentificy(df_estates))
 
 ### Eliminar los NAs del dataset###
 
