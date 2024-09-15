@@ -1,8 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-#Normalizar datos con la funcion MinMaxScaler
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler #Normalizar datos con la funcion MinMaxScaler
 from ipyleaflet import Map, basemaps, Marker #Mapas
 
 # Este archivo CSV contiene puntos y comas en lugar de comas como separadores
