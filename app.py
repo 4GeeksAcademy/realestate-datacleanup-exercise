@@ -1,8 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 #Normalizar datos con la funcion MinMaxScaler
 from sklearn.preprocessing import MinMaxScaler
-from ipyleaflet import Map, basemaps #Mapas
+from ipyleaflet import Map, basemaps, Marker #Mapas
 
 # Este archivo CSV contiene puntos y comas en lugar de comas como separadores
 df_estates = pd.read_csv('assets/real_estate.csv', sep=';')
@@ -55,7 +56,7 @@ def Populations(populations):
 for pop in (Populations(df_estates)):
     print (pop, end=", ")
 
-### Comprobar si hay valores no admitidos en la lista ###
+###Ejercicio 5: Comprobar si hay valores no admitidos en la lista ###
 
 def NanIdentificy(value):
     print (value.isnull().any())
@@ -63,224 +64,220 @@ def NanIdentificy(value):
 
 print (NanIdentificy(df_estates))
 
-### Eliminar los NAs del dataset###
+###Ejercicio 6: Eliminar los NAs del dataset###
 
-def Filter(df):
-   df_filter = df.dropna(axis = 1) #Eliminanos solo las columnas porque si eliminamos las filas se borraría todo el DataSet
+def Filter(value):
+   df_filter = value.dropna(axis=1)
    return df_filter
 
-###Media de precios de Arroyomolinos###
+print(Filter(df_estates).shape)
+print(df_estates.shape)
 
-def MeanArroyomolinos(df):
-    arroyomolinos = df[df['level5'] == "Arroyomolinos (Madrid)"]
-    return arroyomolinos.price.mean()
+###Ejercicio 7: Media de precios de Arroyomolinos###
 
-###Historiograma de los precios de Arroyomolinos###
+def MeanPrice(dataset, city):
+    dataset_city = dataset[dataset['level5'] == city]
+    return dataset_city.price.mean()
 
-def HistogramPriceArroyomolinos(df):
-    arroyomolinos = df[df['level5'] == "Arroyomolinos (Madrid)"]
+print (MeanPrice(df_estates, "Arroyomolinos (Madrid)"))
+
+###Ejercicio 8: Historiograma de los precios de Arroyomolinos###
+
+def HistogramPriceCity(dataset, city):
     plt.figure (figsize=(10,5))
-    plt.hist (arroyomolinos.price, bins=30, alpha=1)
-    plt.title ("Precios de Arroyomolinos (Madrid)")
+    plt.hist (dataset[dataset['level5'] == city].price, bins=30, alpha=1, ec="black")
+    plt.title (f"Precios de {city}")
     plt.show()
-    return None
 
-###Comprobar si el precio promedio de Valdemorillo y de Galapagar son el mismo###
+print (HistogramPriceCity(df_estates,"Arroyomolinos (Madrid)"))
 
-def IsValdemorilloAndGalapagarMeanEqual(df):
-    valdemorillo = df[df['level5'] == "Valdemorillo"]
-    galapagar = df[df['level5'] == "Galapagar"]
-    print (f"El precio medio de Valdemorillo es de {valdemorillo.price.mean()}.\nEl precio medio de Galapagar es de {galapagar.price.mean()}.")
-    if valdemorillo.price.mean() == galapagar.price.mean():
-        print ("El precio medio de Valdemorillo y Galapagar es igual.")
-    elif valdemorillo.price.mean() > galapagar.price.mean():
-        print ("El precio medio de Valdemorillo es superior al de Galapagar")
-    else:
-        print ("El precio medio de Galapagar es superior al de Valdemorillo")
-    return None
+###Ejercicio 9: Comprobar si el precio promedio de Valdemorillo y de Galapagar son el mismo###
 
-###Comprobar si el precio/m2 promedio de Valdemorillo y Galapagar son el mismo###
+print (MeanPrice(df_estates,"Valdemorillo"))
+print (MeanPrice(df_estates,"Galapagar"))
+print (MeanPrice(df_estates,"Valdemorillo") == MeanPrice(df_estates,"Galapagar"))
 
-def IsValdemorilloAndGalapagarMeanPPSEqual(df):
-    pps = df.price / df.surface
-    df['pps'] = pps
-    ppsValdemorillo = df[df['level5'] == "Valdemorillo"]
-    ppsGalapagar = df[df['level5'] == "Galapagar"]
-    print (f"El precio medio de Valdemorillo por metro cuadrado es de {ppsValdemorillo.pps.mean()}.\nEl precio medio de Galapagar por metro cuadrado es de {ppsGalapagar.pps.mean()}.")
-    if ppsValdemorillo.pps.mean() == ppsGalapagar.pps.mean():
-        print ("El precio medio por metro cuadrado de Valdemorillo y Galapagar es el mismo.")
-    elif ppsValdemorillo.pps.mean() > ppsGalapagar.pps.mean():
-        print ("El precio medio por metro cuadrado de Valdemorillo es superior al de Galapagar.")
-    else:
-        print ("El precio medio por metro cuadrado de Galapagar es superior al de Valdemorillo.")
-    return None
+###Ejercicio 10: Comprobar si el precio/m2 promedio de Valdemorillo y Galapagar son el mismo###
+
+def ColumnPPS(dataset):
+    pps = dataset.price / dataset.surface
+    dataset ['pps'] = pps
+    return dataset
+
+dfwith_pps = ColumnPPS(df_estates)
+
+def MeanPPS(dataset, city):
+    pps_datasetCity = dataset[dataset['level5'] == city]
+    return pps_datasetCity.pps.mean()
+
+print (MeanPPS(dfwith_pps, "Valdemorillo"))
+print (MeanPPS(dfwith_pps, "Galapagar"))
+print (MeanPPS(dfwith_pps,"Valdemorillo") == MeanPPS(dfwith_pps,"Galapagar"))
   
-###Analizamos la relación entre el precio y la superficie de las casas.###
+###Ejercicio 11: Analizamos la relación entre el precio y la superficie de las casas.###
 
-def RelPriceSurface(df): #SIN ACABAR
+def DataSetCity(dataset, city):
+    datacity = dataset[dataset['level5'] == city]
+    return datacity
+
+df_valdemorillo = DataSetCity(df_estates, "Valdemorillo")
+df_galapagar = DataSetCity(df_estates, "Galapagar")
+
+def RelPriceSurfaceTwoCities(dataset1, dataset2, city1, city2):
     plt.figure(figsize=(10,5))
-    plt.scatter(df.price, df.surface, label = "Precio")
-
+    plt.scatter(dataset1.price, dataset1.surface, label = city1)
+    plt.scatter(dataset2.price, dataset2.surface, label = city2)
     plt.title("Relación Superficie/Precio")
     plt.legend()
     plt.show()
-    return None
 
-###Buscamos cuantas agencias contiene el DataSet###
-def HowManyRealEstatesAre(df):
-    return len(df.id_realEstates.value_counts()) #Juntamos todas las ID de las Inmobiliarias y devolvemos la longitud.
+print (RelPriceSurfaceTwoCities(df_valdemorillo, df_galapagar, "Valdemorillo", "Galapagar"))
 
-###Buscamos la población con más cantidad de casas###
+###Ejercicio 12: Buscamos cuantas agencias contiene el DataSet###
+def HowManyRealEstatesAre(value):
+    return len(value.id_realEstates.unique()) #Imprimimos solamente los valores unicos.
 
-def HowCityHaveMoreHouses(df):
-    return df.level5.value_counts().head(1)
+print (HowManyRealEstatesAre(df_estates))
 
-###Creamos un nuevo DataFrame que contenga Fuenlabrada, Leganes, Getafe y Alcorcón"###
+###Ejercico 13: Buscamos la población con más cantidad de casas###
 
-def CinturonSur(df):
-    filt_cinturonSur =df['level5'].isin(["Fuenlabrada","Leganés","Getafe","Alcorcón"])
-    cinturonsur = df[filt_cinturonSur]
-    return cinturonsur
+def HowCityHaveMoreHouses(data):
+    city = data.level5.value_counts().head(1) #Aquí contamos las veces que un valor se repite y cogemos el primero
+    houses = data.level5.value_counts().sum()
+    print (city, houses)
 
-###Grafico de barra de la mediana de los precios de Cinturon Sur###
+print (HowCityHaveMoreHouses(df_estates))
 
-def CinturonSurMeanPrice(df):
-    labels = ["Fuenlabrada","Alcorcón","Leganés","Getafe"]
-    fuenlabrada = df[df['level5'] == "Fuenlabrada"].price.mean()
-    alcorcon = df[df['level5'] == "Alcorcón"].price.mean()
-    leganes = df[df['level5'] == "Leganés"].price.mean()
-    getafe = df[df['level5'] == "Getafe"].price.mean()
-    values = (fuenlabrada, alcorcon, leganes, getafe)
+###Ejercicio 14: Creamos un nuevo DataFrame que contenga Fuenlabrada, Leganes, Getafe y Alcorcón"###
+
+def CityFilter(dataset, city1, city2, city3, city4):
+    filt_cities =dataset['level5'].isin([city1,city2,city3,city4])
+    new_dataset = dataset[filt_cities].reset_index()
+    return new_dataset
+
+cinturonsur = CityFilter(df_estates, "Fuenlabrada","Leganés","Getafe","Alcorcón")
+print (cinturonsur)
+
+###Ejercicio 15: Grafico de barra de la mediana de los precios de Cinturon Sur###
+
+def MultiCityMeanPrice(dataset, city1, city2, city3, city4):
+    labels = [city1, city2, city3, city4]
+    city1 = dataset[dataset['level5'] == city1].price.mean()
+    city2 = dataset[dataset['level5'] == city2].price.mean()
+    city3 = dataset[dataset['level5'] == city3].price.mean()
+    city4 = dataset[dataset['level5'] == city4].price.mean()
+    values = (city1, city2, city3, city4)
     plt.figure(figsize=(10,5))
-    plt.bar(labels, values)
+    plt.bar(labels, values, ec="black")
 
     plt.title("Precios Medios Cinturón Sur")
     plt.show()
 
-    return None
+print(MultiCityMeanPrice(cinturonsur, "Fuenlabrada","Leganés","Getafe","Alcorcón")) 
 
-###Calcula la medía y la varianza de muestra del Cinturón Sur###
+###Ejercicio 16: Calcula la medía y la varianza de muestra del Cinturón Sur###
 
-def MeanAndVar(df):
-    #Para calcular la varianza típica hemos de asegurarnos que ddof es 0.
-    
-    return f"La media de precios del cinturón sur es de {df.price.mean()} y la varianza de precios es de {df.price.var(ddof = 0)}\nLa media de habitaciones en el cinturón sur es de {df.rooms.mean()} y la varianza es de {df.rooms.var(ddof = 0)}\nLa media de baños en el cinturón sur es de {df.bathrooms.mean()} y la varianza es de {df.bathrooms.var(ddof = 0)}\nLa media de superficie del cinturón sur es de {df.surface.mean()} y la varianza es de {df.surface.var(ddof = 0)}"
+def Variance(dataset, value):
+    return dataset[value].var(ddof = 0)
 
-def HowIsMostExpensiveHouse(df):
-    fuenlabrada = df[df['level5'] == "Fuenlabrada"].sort_values(by = 'price').tail(1).squeeze()
-    alcorcon = df[df['level5'] == "Alcorcón"].sort_values(by = 'price').tail(1).squeeze()
-    leganes = df[df['level5'] == "Leganés"].sort_values(by = 'price').tail(1).squeeze()
-    getafe = df[df['level5'] == "Getafe"].sort_values(by = 'price').tail(1).squeeze()
-    return f"La casa más cara de {fuenlabrada.level5} en {fuenlabrada.address} tiene un precio de {fuenlabrada.price} €.\nLa casa más cara de {alcorcon.level5} en {alcorcon.address} tiene un precio de {alcorcon.price} €.\nLa casa más cara de {leganes.level5} en {leganes.address} tiene un precio de {leganes.price} €.\nLa casa más cara de {getafe.level5} en {getafe.address} tiene un precio de {getafe.price} €."
+def Mean(dataset, value):
+    return dataset[value].mean()
 
-###Historiograma de precios del Cinturon Sur###
+print (f"Varianza del precio: {Variance(cinturonsur,'price')}")
+print (f"Media de precios: {Mean(cinturonsur,'price')}")
+print (f"Varianza de las habitaciones: {Variance(cinturonsur,'rooms')}")
+print (f"Media de las habitaciones: {Mean(cinturonsur,'rooms')}")
+print (f"Varianza de la superficie: {Variance(cinturonsur,'surface')}")
+print (f"Media de la superficie: {Mean(cinturonsur,'surface')}")
+print (f"Varianza de los baños: {Variance(cinturonsur,'bathrooms')}")
+print (f"Media de baños: {Mean(cinturonsur, 'bathrooms')}")
 
-def HistogramPriceCinturonSur(df):
-    #Formula de normalización: x' = x-xmin/xmax-xmin
-    fuenlabrada = df[df['level5'] == "Fuenlabrada"]
-    fuenlabrada_scaled = scaler.fit_transform(fuenlabrada[['price']])
-    alcorcon = df[df['level5'] == "Alcorcón"]
-    alcorcon_scaled =scaler.fit_transform(alcorcon[['price']])
-    leganes = df[df['level5'] == "Leganés"]
-    leganes_scaled = scaler.fit_transform(leganes[['price']])
-    getafe = df[df['level5'] == "Getafe"]
-    getafe_scaled = scaler.fit_transform(getafe[['price']])
+###Ejercicio 17: Cual es la casa más cara de cada población###
+
+def MostExpensiveHousePerCity(dataset, city):
+    expensivehouse = dataset[dataset['level5'] == city].sort_values('price').tail(1).squeeze() #Squeeze sirve para eliminar dimensiones en una matriz.
+    print (f"{city}. Precio: {expensivehouse.price}. Dirección: {expensivehouse.address}")
+
+print (MostExpensiveHousePerCity(cinturonsur, "Fuenlabrada"))
+print (MostExpensiveHousePerCity(cinturonsur, "Alcorcón"))
+print (MostExpensiveHousePerCity(cinturonsur, "Leganés"))
+print (MostExpensiveHousePerCity(cinturonsur, "Getafe"))
+
+###Ejercicio 18: Historiograma de precios del Cinturon Sur###
+
+scaler=MinMaxScaler() #Para poder normalizar datos. Formula de normalización: x' = x-xmin/xmax-xmin
+
+def NormalicePriceCity(dataset,city):
+    datacity = dataset[dataset['level5'] == city]
+    price_scaled = scaler.fit_transform(datacity[['price']])
+    return price_scaled
 
     #Creamos el Histograma
 
-    plt.figure(figsize=(10,5))
-    plt.hist([fuenlabrada_scaled, alcorcon_scaled, leganes_scaled, getafe_scaled], bins=30, alpha=0.8, label="Fuenlabrada")
-    plt.hist(alcorcon_scaled,bins=30, alpha=0.8, label="Alcorcón")
-    plt.hist(leganes_scaled, bins=30, alpha=0.8, label="Leganés")
-    plt.hist(getafe_scaled, bins=30, alpha=0.8, label="Getafe")
+def MultigramaPricesNormalized(dataset, city1, city2, city3, city4):
+    plt.figure(figsize = (10, 5))
+    plt.hist(NormalicePriceCity(dataset, city1), bins=30, alpha=0.8, ec="Black", label=city1)
+    plt.hist(NormalicePriceCity(dataset, city2), bins=30, alpha=0.8, ec="Black", label=city2)
+    plt.hist(NormalicePriceCity(dataset, city3), bins=30, alpha=0.8, ec="Black", label=city3)
+    plt.hist(NormalicePriceCity(dataset, city4), bins=30, alpha=0.8, ec="Black", label=city4)
 
     plt.legend()
     plt.show()
 
-    return None
+print (MultigramaPricesNormalized(cinturonsur,"Fuenlabrada","Alcorcón","Leganés","Getafe"))
 
-###Precio medio/m2 Getafe y Alcorcón###
+### Ejercicio 19: Precio medio/m2 Getafe y Alcorcón###
 
-def PricePerSquareGetafeAndAlcorcon(df):
-    #Creamos la columna pps
-    pps = df.price / df.surface
-    df['pps'] = pps
-
-    getafe = df[df['level5'] == "Getafe"]
-    getafe_scaled = scaler.fit_transform([['pps']])
-    alcorcon = df[df['level5'] == "Alcorcón"]
-    alcorcon_scaled = scaler.fit_transform([['pps']])
+def HistTwoCitiesPPS(dataset, city1, city2):
+    plt.figure(figsize=(10,5))
+    plt.title(f"Precio por metro cuadrado entre {city1} y {city2}.")
+    plt.subplot(1,2,1)
+    plt.hist(dataset[dataset['level5'] == city1].pps, bins=30, alpha=0.8, ec="black", label=city1)
+    plt.legend()
+    plt.subplot(1,2,2)
+    plt.hist(dataset[dataset['level5'] == city2].pps, bins=30, alpha=0.8, ec="black", label=city2)
+    plt.legend()
+    plt.show()
     
+print(HistTwoCitiesPPS(dfwith_pps, "Getafe", "Alcorcón"))
 
-    return None
+###Ejercicio 20: 4 subconjuntos en un grafico. ###
 
-#########Ejercicios########
+def MultiGrafic(dataset, city1,city2,city3,city4):
+    plt.figure(figsize=(10,10))
+    plt. title("Gráfica de dispersión precio/superficie")
+    plt.subplot(2,2,1)
+    plt.scatter((dataset[dataset['level5'] == city1].price),(dataset[dataset['level5'] == city1].surface), label = city1, color="red")
+    plt.legend()
+    plt.subplot(2,2,2)
+    plt.scatter((dataset[dataset['level5'] == city2].price),(dataset[dataset['level5'] == city2].surface), label = city2, color="blue")
+    plt.legend()
+    plt.subplot(2,2,3)
+    plt.scatter((dataset[dataset['level5'] == city3].price),(dataset[dataset['level5'] == city3].surface), label = city3, color="green")
+    plt.legend()
+    plt.subplot(2,2,4)
+    plt.scatter((dataset[dataset['level5'] == city4].price),(dataset[dataset['level5'] == city4].surface), label = city4, color="orange")
+    plt.legend()
+    plt.show()
+  
 
-#Ejercicio1
-#print (HighPrice(df_estates))
+print (MultiGrafic(cinturonsur, "Fuenlabrada", "Leganés", "Getafe", "Alcorcón"))
 
-#Ejercicio2
-#print (LowPrice(df_estates))
-
-#Ejercicio3.1
-#print (MoreSurface(df_estates))
-
-#Ejercicio3.2
-#print (LessSurface(df_estates))
-
-#Ejercicio4
-#print (Populations(df_estates))
-
-#Ejercicio5
-#print (NanIdentificy(df_estates))
-
-#Ejercicio6
-#print(Filter(df_estates))
-#print (df_estates)
-
-#Ejercicio7
-#print(MeanArroyomolinos(df_estates))
-
-#Ejercicio8
-#print(HistogramPriceArroyomolinos(df_estates))
-
-#Ejercicio9
-#print (IsValdemorilloAndGalapagarMeanEqual(df_estates))
-
-#Ejercicio10
-#print (IsValdemorilloAndGalapagarMeanPPSEqual(df_estates))
-
-#Ejercicio11
-#print (RelPriceSurface(df_estates))
-
-#Ejercicio12
-#print (HowManyRealEstatesAre(df_estates))
-
-#Ejercicio13
-#print(HowCityHaveMoreHouses(df_estates))
-
-#Ejercicio14
-#CinturonSur(df_estates)
-
-#Ejercicio15
-#print(CinturonSurMeanPrice(CinturonSur(df_estates)))
-
-#Ejercicio16
-#print (MeanAndVar(CinturonSur(df_estates)))
-
-#Ejercicio17
-#print (HowIsMostExpensiveHouse(CinturonSur(df_estates)))
-
-#Ejercicio18
-#print(HistogramPriceCinturonSur(CinturonSur(df_estates)))
-
-#Ejercicio19
-#print (PricePerSquareGetafeAndAlcorcon(CinturonSur(df_estates)))
-
-#Ejercicio21
+###Ejercicio 21: Mapa
 # Mapa centrado en (60 grados latitud y -2.2 grados longitud)
 # Latitud, longitud
-map = Map(center = (60, -2.2), zoom = 2, min_zoom = 1, max_zoom = 20, 
-    basemap=basemaps.Esri.WorldStreetMap)
+mapa = Map(center = (60 , -2.2), zoom = 2, min_zoom = 1, max_zoom = 20, 
+    basemap = basemaps.OpenTopoMap)
+## Aquí: traza la coordenadas de los estados
+def GetCoordinatesDict(dataset):
+    return dataset[['latitude','longitude']].to_dict()
 
-display (map)
+coordenadas = GetCoordinatesDict(cinturonsur)
+
+def AddMarker(dataset):
+    for i in range(len(dataset['latitude'])):
+        marker = Marker(location=(dataset["latitude"][i],dataset["longitude"][i]))
+        mapa.add(marker)
+
+print(AddMarker(coordenadas))
+display (mapa)
