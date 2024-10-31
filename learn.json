@@ -10,5 +10,4 @@
     "projectType": "project",
     "video-solutions": false
     "technologies": "pandas", "numpy", "opencv", "matplotlib", "ipyleaflet", "scikit-learn", "jupyter notebook", "machine learning", "data science",
-	"difficulty": "beginner",
 }
