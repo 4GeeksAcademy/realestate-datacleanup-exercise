@@ -4,7 +4,7 @@
 
 - Understand a new dataset.
 - Use the knowledge acquired in the prework to solve the issues raised.
-- Analyze, if necessary, other questions.
+- Analyze if necessary, other questions.
 
 ## 🌱 How to start this project.
 
