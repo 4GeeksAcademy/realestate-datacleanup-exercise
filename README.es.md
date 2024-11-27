@@ -6,7 +6,7 @@
 - Utilizar los conocimientos adquiridos en el prework para resolver las cuestiones planteadas.
 - Analizar, si fuera necesario, otras cuestiones.
 
-<onlyfor saas="false" withBanner="false"
+<onlyfor saas="false" withBanner="false">
 
 ## 🌱  Cómo iniciar este proyecto
 
