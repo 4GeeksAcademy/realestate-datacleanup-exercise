@@ -3,14 +3,14 @@
 <!--endhide-->
 
 - Comprender un dataset nuevo.
-- Utilizar los conocimientos adquiridos en el prework para resolver las cuestiones planteadas.
+- Utiliza los conocimientos adquiridos en el prework para resolver las cuestiones planteadas.
 - Analizar, si fuera necesario, otras cuestiones.
 
 ## 🌱  Cómo iniciar este proyecto
 
 Sigue las siguientes instrucciones:
 
-1. Crear un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise) o [haciendo clic aquí](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise/fork).
+1. Crea un nuevo repositorio haciendo fork en el [proyecto de Git](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise) o [haciendo clic aquí](https://github.com/4GeeksAcademy/realestate-datacleanup-exercise/fork).
 2. Abre el repositorio creado recientemente en Codespace usando la [extensión del botón de Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
 3. Una vez que el VSCode del Codespace haya terminado de abrirse, comienza tu proyecto siguiendo las instrucciones a continuación.
 
