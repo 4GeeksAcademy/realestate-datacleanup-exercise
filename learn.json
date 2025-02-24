@@ -6,6 +6,7 @@
     "preview": "https://github.com/4GeeksAcademy/realestate-datacleanup-exercise/blob/main/assets/preview.jpeg?raw=true",
     "description": "Prepare a real dataset to later train a machine learning model",
     "duration": 3,
+    "template_url": "self",
     "difficulty": "easy",
     "projectType": "project",
     "technologies": ["pandas", "numpy", "opencv", "matplotlib", "ipyleaflet", "scikit-learn", "jupyter notebook", "machine learning", "data science"]
