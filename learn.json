@@ -8,6 +8,7 @@
     "duration": 3,
     "template_url": "self",
     "difficulty": "easy",
+    "gitpod": true,
     "projectType": "project",
     "technologies": ["pandas", "numpy", "opencv", "matplotlib", "ipyleaflet", "scikit-learn", "jupyter notebook", "machine learning", "data science"]
 }
