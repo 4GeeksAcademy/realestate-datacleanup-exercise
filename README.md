@@ -27,13 +27,13 @@ Follow the instructions below:
     - When you open the notebook, a message will appear at the top indicating **"Select Kernel"**.
     - Click on **"Select Kernel"** (as shown in the image).
 
-![image-kernel](.\assets\image-kernel.png)
+![image-kernel](assets/image-kernel.png)
 
 3. A list with available options will be displayed. Select **"Python Environments"** and choose the Python version you want to use.
 
     - Make sure to select the version specified in the `devcontainer.json` file, as this is the recommended one for the project.
 
-![image-devcontainer](.\assets\devcontainer-image.png)
+![image-devcontainer](assets/devcontainer-image.png)
 
 All set! Now you can start solving the exercises one by one. Remember to read each statement carefully and apply what you have learned. 🚀
 
