@@ -21,7 +21,7 @@ Follow the instructions below:
 
 ## 📝 Instructions
 
-1. Once you start working on the project, you will see a file `./project.es.ipynb` that contains a series of exercises.
+1. Once you start working on the project, you will see a file `./project.ipynb` that contains a series of exercises.
 2. Before starting, make sure to select the **appropriate Kernel**.
 
     - When you open the notebook, a message will appear at the top indicating **"Select Kernel"**.
