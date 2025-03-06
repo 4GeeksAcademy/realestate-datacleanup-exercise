@@ -28,14 +28,14 @@ Sigue las siguientes instrucciones:
     - Haz clic en **"Select Kernel"** (como se muestra en la imagen).       
 
 
-![image-kernel](.\assets\image-kernel.png)
+![image-kernel](assets/image-kernel.png)
 
 3. Se mostrará una lista con las opciones disponibles. Selecciona **"Python Environments"** y elige la versión de Python que deseas utilizar.  
 
     - Asegúrate de seleccionar la versión especificada en el archivo `devcontainer.json`, ya que esta es la recomendada para el proyecto.
 
 
-![image-devcontainer](.\assets\devcontainer-image.png)
+![image-devcontainer](assets/devcontainer-image.png)
 
 
 
