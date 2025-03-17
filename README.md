@@ -18,10 +18,38 @@ Follow the instructions below:
 
 </onlyfor>
 
-## 🚛 How to deliver this project
-
-Once you have finished solving the exercises, be sure to commit your changes, push them to your repository, and go to 4Geeks.com to upload the repository link.
 
 ## 📝 Instructions
 
-Once you start working on the project, you will see a `./project.ipynb` file containing a list of exercises. Complete each of them, one by one.
+1. Once you start working on the project, you will see a file `./project.ipynb` that contains a series of exercises.
+2. Before starting, make sure to select the **appropriate Kernel**.
+
+    - When you open the notebook, a message will appear at the top indicating **"Select Kernel"**.
+    - Click on **"Select Kernel"** (as shown in the image).
+
+![image-kernel](assets/image-kernel.png)
+
+3. A list with available options will be displayed. Select **"Python Environments"** and choose the Python version you want to use.
+
+    - Make sure to select the version specified in the `devcontainer.json` file, as this is the recommended one for the project.
+
+![image-devcontainer](assets/devcontainer-image.png)
+
+All set! Now you can start solving the exercises one by one. Remember to read each statement carefully and apply what you have learned. 🚀
+
+## 🚛 How to submit this project
+
+Once you complete the exercises, follow these steps to submit them correctly:
+
+1. **Save and commit the changes** in your local repository:
+
+   ```sh
+   git add .
+   git commit -m "Completed exercises"
+   ```
+2. Push the changes to GitHub with:
+
+    ```sh
+    git push origin main
+    ```
+3. Go to [4Geeks.com](https://4geeks.com) to submit the link to your repository.
